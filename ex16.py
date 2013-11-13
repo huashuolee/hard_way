@@ -21,13 +21,17 @@ line2 = raw_input("line 2:")
 line3 = raw_input("line 3:")
 
 print "I'm going to write these to the file."
+#using one target.write() command instead of six
+#target.write(line1)
+#target.write("\n")
+#target.write(line2)
+#target.write("\n")
+#target.write(line3)
+#target.write("\n")
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+total = line1+"\n"+line2+"\n"+line3+"\n"
+
+target.write("%s") %total
 
 print "And finally, we close it."
 target.close()
