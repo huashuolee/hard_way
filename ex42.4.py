@@ -17,7 +17,8 @@ class Point():
 
 p = Person(20)
 print p.number
-print Point.x, Point.y
+
 pt = Point()
 pt.setX(1, 2)
+print Point.x, Point.y
 print pt.x,pt.y,pt.test
