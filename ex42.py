@@ -8,11 +8,12 @@ class Dog(Animal):
     def __init__(self, name):
         ##??
         self.name = name
-
+        print '%s is a dog' % self.name  
 ##??
 class Cat(Animal):
     def __init__(self, name):
         self.name = name
+        print '%s is a cat' % self.name
 
 
 ##??
@@ -21,11 +22,11 @@ class Person(object):
 
     def __init__(self, name):
 
-        self.name = name
-
+        self.name = name      
      
         self.pet = None
-
+        
+        print '%s is a human, and his pet is %s' % (self.name, self.pet)
 ##??
 class Employee(Person):
 
@@ -66,4 +67,5 @@ flipper = Fish()
 crouse = Salmon()
 
 harry = Halibut()
+print mary.pet
 
