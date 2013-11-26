@@ -1,0 +1,23 @@
+class Person():
+    number = 10
+    def __init__(self, number):
+        self.number = number
+        print self.number
+        print Person.number
+        print self.number
+
+class Point():
+    test = "This is a ..."
+    x = 10
+    y = 20
+
+    def setX(self, x, y):
+        self.x = x
+        self.y = y
+
+p = Person(20)
+print p.number
+print Point.x, Point.y
+pt = Point()
+pt.setX(1, 2)
+print pt.x,pt.y,pt.test
