@@ -1,7 +1,6 @@
 class Person():
     number = 10
-    def __init__(self, number):
-        self.number = number
+    def __init__(self):
         print self.number
         print Person.number
         print self.number
@@ -21,7 +20,7 @@ class Point():
     def getY(self):
         return self.y
 
-p = Person(20)
+p = Person()
 print p.number
 
 pt = Point()

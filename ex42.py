@@ -19,14 +19,17 @@ class Cat(Animal):
 ##??
 
 class Person(object):
+ 
 
     def __init__(self, name):
 
         self.name = name      
      
-        self.pet = None
+        self.pet = 'none'
         
-        print '%s is a human, and his pet is %s' % (self.name, self.pet)
+    def printpet(self) :
+
+    	print '%s is a human, and his pet is %s' % (self.name, self.pet)
 ##??
 class Employee(Person):
 
@@ -56,7 +59,9 @@ satan = Cat("Satan")
 
 mary = Person("Mary")
 
-mary.pet = satan
+mary.pet = satan.name
+
+mary.printpet()
 
 frank = Employee("Frank", 120000)
 
