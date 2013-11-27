@@ -25,7 +25,7 @@ class Person(object):
 
         self.name = name      
      
-        self.pet = 'none'
+        self.pet = None
         
     def printpet(self) :
 
