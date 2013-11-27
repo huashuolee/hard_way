@@ -29,7 +29,7 @@ class Person(object):
         
     def printpet(self) :
 
-    	print '%s is a human, and his pet is %s' % (self.name, self.pet)
+    	print '%s is a human, and his pet is %s' % (self.name, self.pet.name)
 ##??
 class Employee(Person):
 
@@ -59,7 +59,7 @@ satan = Cat("Satan")
 
 mary = Person("Mary")
 
-mary.pet = satan.name
+mary.pet = satan
 
 mary.printpet()
 
