@@ -1,0 +1,2 @@
+1.	Aren't objects just copies of classes?
+In some languages (like JavaScript) that is true. These are called prototype languages and there are not many differences between objects and classes other than usage. In Python, however, classes act as templates that "mint" new objects, similar to how coins were minted using a die (template).
