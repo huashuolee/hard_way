@@ -1,2 +1,38 @@
 1.	Aren't objects just copies of classes?
 In some languages (like JavaScript) that is true. These are called prototype languages and there are not many differences between objects and classes other than usage. In Python, however, classes act as templates that "mint" new objects, similar to how coins were minted using a die (template).
+
+
+
+python 调用shell命令三种方法
+
+1.用os.system(cmd)   不过取不了返回值
+
+2.用os.popen(cmd)   要得到命令的输出内容，只需再调用下read()或readlines()等 如a=os.popen(cmd).read()
+
+使用 a.rstrip() 进行去除换行符“\n"
+
+3.用 commands 模块。其实也是对popen的封装。此模块主要有如下方法
+
+commands.getstatusoutput(cmd) 返回(status, output).
+
+commands.getoutput(cmd) 只返回输出结果
+
+commands.getstatus(file) 返回ls -ld file的执行结果字符串，调用了getoutput，不建议使用此方法.如
+
+>>> importcommands
+
+>>> commands.getstatusoutput('ls /bin/ls')(0, '/bin/ls')
+
+>>> commands.getstatusoutput('cat /bin/junk')
+
+(256, 'cat: /bin/junk: No such file or directory')
+
+>>> commands.getstatusoutput('/bin/junk')
+
+(256, 'sh: /bin/junk: not found')
+
+>>> commands.getoutput('ls /bin/ls')'/bin/ls'
+
+>>> commands.getstatus('/bin/ls')'
+
+-rwxr-xr-x 1 root 13352 Oct 14 1994 /bin/l
